@@ -1,0 +1,139 @@
+/* reset */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+a, a:active, a:visited {
+   text-decoration: none;
+}
+
+body {
+   color: rgb(244, 244, 244);
+   font-family: 'Roboto', sans-serif;
+   background: rgb(47, 47, 51);
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   overflow: hidden;
+}
+
+.content {
+   flex: 1 1 auto;
+}
+
+.container {
+   padding: 0 20px;
+   margin: 0 auto;
+   max-width: 1140px;   
+}
+
+.header, 
+.footer {
+   background: rgb(27, 27, 29);   
+}
+/* header */
+.header {
+   padding: 24px 0;
+   text-align: center;
+}
+
+.title {
+   text-transform: uppercase;
+}
+
+/* main */
+.game__block {
+   margin: 60px 0 100px;
+}
+
+.game__container {
+   margin: 0 auto;
+   width: 400px;
+}
+
+.game {
+   background: rgb(244, 244, 244);
+   border-radius: 4px;
+   box-shadow: 0 0 16px rgb(0, 0, 0, 0.5), inset 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.state {
+   margin: 15px 0;
+   font-size: 24px;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+
+.btn__flex {
+   margin: 20px 0;
+   display: flex;
+   justify-content: space-between;   
+}
+
+.btn {
+   padding: 18px 20px;
+   height: 54px;
+   color: #fff;
+   font-weight: 700;
+   font-size: 20px;
+   text-transform: uppercase;
+   border: none;
+   border-radius: 2px;
+}
+
+.start {
+   background-color: rgb(170, 182, 255); 
+   transition: all 0.3s ease;
+}
+
+.start:hover {
+   background-color: rgb(153, 167, 255);   
+   box-shadow: 0 0 10px rgb(83, 96, 171);
+}
+
+.stop {
+   background-color: rgb(96, 168, 169); 
+   transition: all 0.3s ease;
+}
+
+.stop:hover {
+   background-color: rgb(39, 163, 165);   
+   box-shadow: 0 0 10px rgb(29, 114, 116);
+}
+
+.reset {
+   background-color: rgb(255, 80, 127); 
+   transition: all 0.3s ease;
+}
+
+.reset:hover {
+   background-color: rgb(255, 61, 113);   
+   box-shadow: 0 0 10px rgb(144, 20, 53);
+}
+
+/* footer */
+
+.footer {
+   margin-bottom: -1px;
+   padding: 24px 0;
+}
+
+.flex__footer {
+   display: flex;
+   justify-content: space-between;
+}
+
+.flex__footer .text a {
+   color: rgb(170, 182, 255);
+   transition: all 0.3s ease;
+}
+
+.flex__footer .text a:hover {
+   color: inherit;
+   text-decoration: underline;
+}
