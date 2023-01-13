@@ -1,10 +1,10 @@
-var canvas = document.getElementById('game');
-var context = canvas.getContext('2d');
+let canvas = document.getElementById('game');
+let context = canvas.getContext('2d');
 
-var grid = 16;
-var count = 0;
+let grid = 16;
+let count = 0;
   
-var snake = {
+let snake = {
   x: 160,
   y: 160,
   
@@ -18,7 +18,8 @@ var snake = {
   // длина змейки. увеличивается, при поедании яблока
   maxCells: 4
 };
-var apple = {
+
+let apple = {
   x: 320,
   y: 320
 };
@@ -38,7 +39,7 @@ function loop() {
   }
 
   count = 0;
-  context.clearRect(0,0,canvas.width,canvas.height);
+  context.clearRect(0, 0, canvas.width, canvas.height);
 
   // перемещать змейку по ее скорости
   snake.x += snake.dx;
@@ -89,7 +90,7 @@ function loop() {
     }
 
     // проверить столкновение со всеми ячейками после этой 
-    for (var i = index + 1; i < snake.cells.length; i++) {
+    for (let i = index + 1; i < snake.cells.length; i++) {
       
       // змейка пересекает своё тело. перезапуск игры
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
@@ -132,5 +133,12 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// начать игру
-requestAnimationFrame(loop);
+const start = document.querySelector('#start');
+const state = document.querySelector('#state');
+start.addEventListener('click', () => {
+  // начать игру
+  requestAnimationFrame(loop); 
+  if (requestAnimationFrame(loop)) {
+    state.innerHTML = 'is on';
+  }
+});

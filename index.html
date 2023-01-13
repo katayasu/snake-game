@@ -1,29 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <title>Змейка</title>
-  <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-
-  body {
-    background: rgb(47, 47, 51);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  canvas {
-    background: rgb(165, 180, 32);
-    border: 5px dotted rgb(0, 0, 0);
-    border-radius: 4%;
-  }
-  </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/main.css">
+  <title>Snake-game</title>
 </head>
-<body>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <header class="header">
+          <div class="container">
+            <h1 class="title">snake-game</h1>
+            <!-- сделать кнопку для смены темы с темной на светлую -->
+          </div>
+        </header>
+        
+        <main class="main">
+          <section class="game__block">
+            <div class="container">
+              <div class="game__container">
+                <p class="text">This is a student project. A little snake game for fun.</p>
+                <br><br>
+                <p class="text">Points: </p>
+                <!-- доделать защитывание очков -->
+                <p class="state">Game <span id="state">is off</span></p>
+                <canvas width="400" height="400" class="game" id="game"></canvas>
+                <div class="btn__flex">
+                  <!-- доработать кнопки стоп и резета -->
+                  <button id="start" class="btn start">Start</button>
+                  <button id="stop" class="btn stop">Stop</button>
+                  <button id="reset" class="btn reset">Reset game</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
 
-</body>
-<canvas width="400" height="400" id="game"></canvas>
-<script src="game.js"></script>
+      <footer class="footer">
+        <div class="container">
+          <div class="flex__footer">
+            <p class="text">From: <a href="https://github.com/katayasu">katayasu</a></p>
+            <p class="text">Fork from: <a href="https://github.com/iamlorddop">iamlorddop</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./src/game.js"></script>
+  </body>
 </html>
